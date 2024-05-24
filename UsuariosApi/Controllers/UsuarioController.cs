@@ -32,4 +32,5 @@ public class UsuarioController : ControllerBase
 
         return Ok("Usuário autenticado!");
     }
+
 }
