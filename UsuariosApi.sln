@@ -3,7 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34723.18
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsuariosApi", "UsuariosApi\UsuariosApi.csproj", "{94676E7A-9E1B-46AE-AA73-A68E0917CC28}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UsuariosApi", "UsuariosApi\UsuariosApi.csproj", "{94676E7A-9E1B-46AE-AA73-A68E0917CC28}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "anotacoes", "anotacoes", "{F80FF576-4AC3-4D6F-8F88-1750AD277D63}"
+	ProjectSection(SolutionItems) = preProject
+		sobre-dependencias.md = sobre-dependencias.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
