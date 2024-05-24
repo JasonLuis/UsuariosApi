@@ -7,9 +7,9 @@ using UsuariosApi.Models;
 
 namespace UsuariosApi.Services
 {
-    internal class TokenService
+    public class TokenService
     {
-        public void GenerativeToken(Usuario usuario)
+        public string GenerativeToken(Usuario usuario)
         {
             Claim[] claims = new Claim[]
             {
@@ -19,7 +19,9 @@ namespace UsuariosApi.Services
             };
 
             var chave = new SymmetricSecurityKey(Encoding.UTF8.GetBytes
-                ("AKJSDASD6575ASD"));
+                ("AKJSDASD6575ASDA"));
+
+            // Para usar o algoritmo 'HmacSha256' precisa fornecer uma chave de no mínimo 16 caracteres 
 
             var signInCredentials = new SigningCredentials(chave, SecurityAlgorithms.HmacSha256);
 
@@ -29,6 +31,8 @@ namespace UsuariosApi.Services
                     claims: claims,
                     signingCredentials: signInCredentials
                 );
+
+            return new JwtSecurityTokenHandler().WriteToken(token);
         }
     }
 }
