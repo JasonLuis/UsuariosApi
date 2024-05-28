@@ -9,17 +9,24 @@ namespace UsuariosApi.Services
 {
     public class TokenService
     {
+        private IConfiguration _configuration;
+        public TokenService(IConfiguration configuration)
+        {
+            _configuration = configuration;
+        }
+
         public string GenerativeToken(Usuario usuario)
         {
             Claim[] claims = new Claim[]
             {
                 new Claim("username", usuario.UserName),
                 new Claim("id", usuario.Id),
-                new Claim(ClaimTypes.DateOfBirth, usuario.DataNascimento.ToString())
+                new Claim(ClaimTypes.DateOfBirth, usuario.DataNascimento.ToString()),
+                new Claim("loginTimestamp", DateTime.UtcNow.ToString())
             };
 
             var chave = new SymmetricSecurityKey(Encoding.UTF8.GetBytes
-                ("AKJSDASD6575ASDA"));
+                (_configuration["SymmetricSecurityKey"]));
 
             // Para usar o algoritmo 'HmacSha256' precisa fornecer uma chave de no mínimo 16 caracteres 
 

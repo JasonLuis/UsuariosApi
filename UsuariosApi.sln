@@ -7,6 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UsuariosApi", "UsuariosApi\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "anotacoes", "anotacoes", "{F80FF576-4AC3-4D6F-8F88-1750AD277D63}"
 	ProjectSection(SolutionItems) = preProject
+		secrets.md = secrets.md
 		sobre-dependencias.md = sobre-dependencias.md
 	EndProjectSection
 EndProject
